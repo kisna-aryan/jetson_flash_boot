@@ -1,0 +1,21 @@
+# NFS boot jetson nano
+
+remove sd card from jetson nano
+
+##########  On host machine  ##################
+# install tftp 
+
+sudo apt-get install tftpd-hpa
+
+# install NFS server
+
+sudo apt-get install nfs-kernel-server
+
+service nfs-kernel-server restart
+
+service nfs-kernel-server status
+
+vi /etc/exports
+/media/kisna/nano_yocto/jetson_yocto/build/tmp/work/jetson_nano_devkit-poky-linux/core-image-sato/1.0-r0/rootfs *(rw,nohide,insecure,no_subtree_check,async,no_root_squash)
+
+service nfs-kernel-server restart
