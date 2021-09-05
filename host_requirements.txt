@@ -1,0 +1,2 @@
+sudo apt install libxml2-utils simg2img network-manager abootimg sshpass device-tree-compiler
+
